@@ -21,17 +21,7 @@ public class CommandCompetences implements CommandExecutor {
         int i = 0;
         if(strings[0].isEmpty())
         {
-            for( String[] innerArray: competences)
-            {
-                if(commandSender.getName().equals(competences[i][0]))
-                {
-                    System.out.println(competences[i][0]);
-                    for( String data: innerArray) {
-                        Bukkit.broadcastMessage(data);
-                    }
-                }
-                i++;
-            }
+            commandSender.sendMessage("Aucune compétences pour ce perso !");
         }else {
             for( String[] innerArray: competences)
             {
