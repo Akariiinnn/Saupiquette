@@ -1,0 +1,33 @@
+name: Saupiquette
+version: '${project.version}'
+main: akariiinnn.minecraft.Saupiquette
+api-version: 1.19
+
+commands:
+  admin:
+    description: Send message to Server Admin
+    usage: /<command> "message"
+
+  roll:
+    description: roll between 0 and given number (default=100)
+    usage: /<command> "number"
+
+  competence:
+    description: Print abilities from the user
+    usage: /<command>
+
+  combat:
+    description: Create a fight between two players
+    usage: /<command> "opponent"
+
+  sethome:
+    description: Set your home coordinates
+    usage: /<command>
+
+  home:
+    description: Teleport to your home
+    usage: /<command>
+
+  winrate:
+    description: Prints the winrate of everyone
+    usage: /<command>
