@@ -14,6 +14,7 @@ public class CommandCraft implements CommandExecutor {
         {
             Player p = (Player) sender;
             p.openWorkbench(p.getLocation(), true);
+            return true;
         }
         return false;
     }
