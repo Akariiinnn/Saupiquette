@@ -1,6 +1,6 @@
 name: Saupiquette
 version: '${project.version}'
-main: akariiinnn.minecraft.Saupiquette
+main: mc.akariiinnn.saupiquette.Saupiquette
 api-version: 1.19
 
 commands:
