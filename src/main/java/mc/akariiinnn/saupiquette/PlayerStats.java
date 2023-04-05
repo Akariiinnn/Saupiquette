@@ -1,13 +1,10 @@
-package akariiinnn.minecraft;
+package mc.akariiinnn.saupiquette;
 
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
 import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.List;
 
 public class PlayerStats {
 

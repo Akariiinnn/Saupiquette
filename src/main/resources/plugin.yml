@@ -31,3 +31,7 @@ commands:
   winrate:
     description: Prints the winrate of everyone
     usage: /<command>
+
+  craft:
+    description: Opens crafting table
+    usage: /<command>

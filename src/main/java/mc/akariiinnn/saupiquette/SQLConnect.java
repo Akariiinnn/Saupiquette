@@ -1,4 +1,4 @@
-package akariiinnn.minecraft;
+package mc.akariiinnn.saupiquette;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

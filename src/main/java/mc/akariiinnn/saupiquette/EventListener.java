@@ -1,4 +1,4 @@
-package akariiinnn.minecraft;
+package mc.akariiinnn.saupiquette;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

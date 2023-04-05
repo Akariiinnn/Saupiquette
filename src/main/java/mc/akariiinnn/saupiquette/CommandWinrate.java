@@ -1,4 +1,4 @@
-package akariiinnn.minecraft;
+package mc.akariiinnn.saupiquette;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

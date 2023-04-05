@@ -1,4 +1,4 @@
-package akariiinnn.minecraft;
+package mc.akariiinnn.saupiquette;
 
 import org.bukkit.Location;
 import org.bukkit.World;
