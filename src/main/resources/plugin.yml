@@ -3,6 +3,9 @@ version: '${project.version}'
 main: mc.akariiinnn.saupiquette.Saupiquette
 api-version: 1.19
 
+permissions:
+  admin:
+
 commands:
   admin:
     description: Send message to Server Admin
@@ -35,3 +38,7 @@ commands:
   craft:
     description: Opens crafting table
     usage: /<command>
+
+  money:
+    description: See money or pay to someone
+    usage: /<command> {pay} {player} {number}

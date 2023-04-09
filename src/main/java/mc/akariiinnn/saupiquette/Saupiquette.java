@@ -1,5 +1,6 @@
 package mc.akariiinnn.saupiquette;
 
+import org.bukkit.command.Command;
 import org.bukkit.plugin.java.JavaPlugin;
 public final class Saupiquette extends JavaPlugin {
 
@@ -16,6 +17,7 @@ public final class Saupiquette extends JavaPlugin {
             this.getCommand("home").setExecutor(new CommandHome());
             this.getCommand("winrate").setExecutor(new CommandWinrate());
             this.getCommand("craft").setExecutor(new CommandCraft());
+            this.getCommand("money").setExecutor(new CommandMoney());
         } catch(NullPointerException e)
         {
             System.out.println(e.getMessage());

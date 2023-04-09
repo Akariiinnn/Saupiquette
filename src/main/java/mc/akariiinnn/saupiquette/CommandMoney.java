@@ -16,10 +16,11 @@ public class CommandMoney implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String str, String[] args) {
         if (sender instanceof Player) {
             Player p = (Player) sender;
-            if (args == null) {
+            String str2 = String.join("", args);
+            if (str2.isEmpty()) {
                 try {
                     SQLConnect sqlConnect = new SQLConnect();
-                    String sql = "SELECT money WHERE username = \"" + p.getName() + "\"";
+                    String sql = "SELECT money FROM PlayerStats WHERE username = \"" + p.getName() + "\"";
                     Connection connection = sqlConnect.getConnection();
                     Statement statement = connection.createStatement();
                     ResultSet rs = statement.executeQuery(sql);
@@ -28,24 +29,32 @@ public class CommandMoney implements CommandExecutor {
                     }
                     return true;
                 } catch (SQLException e) {
+                    e.printStackTrace();
                     System.out.println("Unable to get player money");
                     return false;
                 }
-            }
+            } else try {
+                if (args[0].equals("pay")) {
+                    System.out.println("rabiot");
+                    SQLConnect sqlConnect = new SQLConnect();
+                    String sql = "UPDATE PlayerStats SET money = money + " + args[2] + " WHERE username = \"" + args[1] + "\"";
+                    String sql2 = "UPDATE PlayerStats SET money = money - " + args[2] + " WHERE username = \"" + p.getName() + "\"";
+                    Connection connection = sqlConnect.getConnection();
+                    Statement statement = connection.createStatement();
+                    statement.execute(sql);
+                    statement.execute(sql2);
+                    return true;
+                    }
+                    } catch (SQLException e) {
+                        System.out.println("Unable to update player money");
+                        return false;
+                    } catch(ArrayIndexOutOfBoundsException e) {
+                        p.sendMessage("Not enough parameters");
+                        return false;
+                    }
+                }
             return false;
-        }else if(args[0].equals("pay"))
-        {
-            try{
-                SQLConnect sqlConnect = new SQLConnect();
-                String sql = "UPDATE PlayerStats SET money = \"" + args[2] + "\" WHERE username = \"" + args[1] + "\"";
-                Connection connection = sqlConnect.getConnection();
-                Statement statement = connection.createStatement();
-            } catch(SQLException e)
-            {
-                System.out.println("Unable to update player money");
-            }
         }
-        return false;
     }
-}
+
 
